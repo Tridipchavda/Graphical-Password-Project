@@ -1,0 +1,268 @@
+<html>
+<head>
+    <title>Sample</title>
+    <style>
+        
+        .container{
+           overflow: hidden;
+            height: 300px;
+            width: 200px;
+            margin-top:50px;
+            border-radius:0px 0px 20px 20px;
+            border-bottom: 4px double rgb(155, 155, 155);
+            border: 4px double rgb(122, 122, 122);
+            border-top:0;
+        }
+        .filling{
+            padding: 5px;
+            margin:5px;
+            font-size: 24px;
+            background:rgb(0, 183, 255);
+            border-radius: 5px;
+            color: azure;
+            border: none;
+            height: 50px;
+            width: 50px;
+        }
+        .liquid{
+            height:30px ;
+            width: 200px;
+            background-color: transparent;
+        }
+        .color{
+            padding: 5px;
+            margin:5px;
+            font-size: 20px;
+            border-radius: 5px;
+            color: azure;
+            border: none;
+            height: 50px;
+            width: 50px;
+        }
+        .logo{
+            padding: 5px;
+            margin:0px 10px;
+            font-size: 20px;
+            border-radius: 5px;
+            color: azure;
+            border: none;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body style="align-items: center;">
+    <center>
+    <input disabled class='storage1' type="text" name="password1" placeholder="0"></input>
+    <input disabled class='storage2' type="text" value='rgb(255, 101, 101)' name="password2" placeholder="0"></input>
+    <input disabled class='storage3' type="text" name="password3" value="nodejs" placeholder="nodejs.svg"></input>
+    <input disabled class='storage4' type="text" name="password4" value="medium" placeholder="Medium"></input>
+
+    </br>
+
+    <!-- Main Glass -->
+    <div class='container'>
+        <img class='img' src='Images/nodejs.svg' style="position:absolute;margin-top: 100px;margin-left: -30px;" width="60px" height="60px">
+        <div class='liquid' id="10"></div>
+        <div class='liquid' id="9" ></div>
+        <div class='liquid' id="8" ></div>
+        <div class='liquid' id="7" ></div>
+        <div class='liquid' id="6" ></div>
+        <div class='liquid' id="5" ></div>
+        <div class='liquid' id="4" ></div>
+        <div class='liquid' id="3" ></div>
+        <div class='liquid' id="2" ></div>
+        <div class='liquid' id="1" ></div>
+    </div>
+
+    <!--        Filling Section          -->
+    <div style="display: flex;flex-wrap: wrap;width: 80%;">
+    
+    <div style="width: 350px;margin-left: 100px;">
+        <h1 style="font-family: 'Franklin Gothic Medium';letter-spacing: 2px;">Fill</h1>
+        <button class="filling" onclick="fill(1)">1</button>
+        <button class="filling" onclick="fill(2)">2</button>
+        <button class="filling" onclick="fill(3)">3</button>
+        <button class="filling" onclick="fill(4)">4</button>
+        <button class="filling" onclick="fill(5)">5</button>
+        <button class="filling" onclick="fill(6)">6</button>
+        <button class="filling" onclick="fill(7)">7</button>
+        <button class="filling" onclick="fill(8)">8</button>
+        <button class="filling" onclick="fill(9)">9</button>
+        <button class="filling" onclick="fill(10)">10</button>
+    </div>
+    
+    <!--        Colour Section          -->
+
+    <div style="width: 350px;margin-left: 100px;">
+        <h1 style="font-family: 'Franklin Gothic Medium';letter-spacing: 2px;">Colour</h1>
+        
+        <button class='color' style='background:rgb(255, 147, 75);' onclick="color('rgb(255, 147, 75)')"></button>
+        <button class='color' style='background:rgb(95, 203, 246);' onclick="color('rgb(95, 203, 246)')"></button>
+        <button class='color' style='background:rgb(156, 230, 201);' onclick="color('rgb(57, 233, 165)')"></button>
+        <button class='color' style='background:rgb(210, 88, 231);' onclick="color('rgb(210, 88, 231)')"></button>
+        <button class='color' style='background:rgb(255, 195, 195);' onclick="color('rgb(255, 195, 195)')"></button>
+        <button class='color' style='background:rgb(253, 255, 142);' onclick="color('rgb(253, 255, 142)')"></button>
+        <button class='color' style='background:rgb(45, 255, 26);' onclick="color('rgb(45, 255, 26)')"></button>
+        <button class='color' style='background:rgb(130, 226, 218);' onclick="color('rgb(130, 226, 218)')"></button>
+        <button class='color' style='background:rgb(206, 206, 206);' onclick="color('rgb(206, 206, 206)')"></button>
+        <button class='color' style='background:rgb(255, 101, 101);' onclick="color('rgb(255, 101, 101)')"></button>
+    </div>
+
+    <!--        Logo Section          -->
+    <div style="margin-right: 130px;">
+        <h1 style="font-family: 'Franklin Gothic Medium';letter-spacing: 2px;">Logo</h1>
+        <button class='logo' onclick="setlogo('nodejs')">
+            <img src='Images/nodejs.svg' width="40px" height="40px">
+        </button>
+        <button class='logo' onclick="setlogo('c (2)')">
+            <img src='Images/c (2).svg' width="40px" height="40px">
+        </button>
+        <button class='logo' onclick="setlogo('cpp (2)')">
+            <img src='Images/cpp (2).svg' width="40px" height="40px">
+        </button>
+        <button class='logo' onclick="setlogo('photoshop')">
+            <img src='Images/photoshop.svg' width="40px" height="40px">
+        </button>
+        <button class='logo' onclick="setlogo('Python')">
+            <img src='Images/Python.svg' width="40px" height="40px">
+        </button>
+        
+    </div>
+
+    <!--        Size Section        -->
+    <div>
+        <h1 style="font-family: 'Franklin Gothic Medium';letter-spacing: 2px;">Size</h1>
+        <button style='padding: 5px;margin:0px 5px;width: 100px;font-size: 15px;background:rgb(129, 84, 235);border-radius: 5px;color: azure;border: none;height: 50px;' onclick="size('shotglass')">Shot Glass</button>
+        <button style='padding: 5px;margin:0px 5px;width: 100px;font-size: 15px;background:rgb(129, 84, 235);border-radius: 5px;color: azure;border: none;height: 50px;' onclick="size('rockglass')">Rock Glass</button>
+        <button style='padding: 5px;margin:0px 5px;width: 100px;font-size: 15px;background:rgb(129, 84, 235);border-radius: 5px;color: azure;border: none;height: 50px;' onclick="size('Medium')">Medium</button>
+        <button style='padding: 5px;margin:0px 5px;width: 100px;font-size: 15px;background:rgb(129, 84, 235);border-radius: 5px;color: azure;border: none;height: 50px;' onclick="size('large')">Large</button>
+        <button style='padding: 5px;margin:0px 5px;width: 100px;font-size: 15px;background:rgb(129, 84, 235);border-radius: 5px;color: azure;border: none;height: 50px;' onclick="size('xlarge')">X Large</button>
+  
+    </div>
+    </div>
+</center>
+</body>
+<script>
+    var value;
+    var savedColor='rgb(255, 101, 101)'; //save color of liquid
+    var savedLogo='Images/nodejs.svg'; //save logo on glass
+
+    //Filling Liquid to glass
+    function fill(id) {
+        value= parseInt(id);
+        var storedata = '0000000'+id; 
+        document.querySelector('.storage1').value = storedata;
+        for(var i=1;i<=value;i++){
+            document.getElementById(i).style.background=savedColor;
+            document.getElementById(i).style.transition='0.4s';
+        }
+        for(var i=value+1;i<=10;i++){
+            document.getElementById(i).style.background='white';
+            document.getElementById(i).style.transition='0.4s';
+        }
+    }
+
+    //Choose type of color
+    function color(fillColor) {
+        savedColor = fillColor;
+        document.querySelector('.storage2').value = fillColor;
+        for(var i=1;i<=value;i++){
+            document.getElementById(i).style.background=fillColor;
+        }
+        for(var i=value+1;i<=10;i++){
+            document.getElementById(i).style.background='white';
+        }
+        
+    }
+
+    //Set Logo for the glass
+    function setlogo(name){
+        var logoPath = 'Images/'+name+'.svg';
+        savedLogo = logoPath;
+        //console.log(logoPath);
+
+        document.querySelector('.storage3').value=name;
+        document.querySelector('.img').src=logoPath;
+    }
+
+    //Controls the size of the glass
+    function size(sizeType){
+
+        document.querySelector('.storage4').value=sizeType;
+
+        if(sizeType=='shotglass'){
+            //Change container
+            document.querySelector('.container').style.height='160px';
+            document.querySelector('.container').style.width='120px';
+
+            //Managing Margin of image
+            document.querySelector('.img').style.margin='40px 0px 0px -30px';
+
+            //Maintain Liquid
+            for(var i=1;i<=10;i++){
+                document.getElementById(i).style.width='120px';
+                document.getElementById(i).style.height='16px';
+            }
+            
+        }
+        else if(sizeType=='rockglass'){
+            //Change container
+            document.querySelector('.container').style.height='180px';
+            document.querySelector('.container').style.width='200px';
+
+            //Managing Margin of image
+            document.querySelector('.img').style.margin='40px 0px 0px -30px';
+
+            //Maintain Liquid
+            for(var i=1;i<=10;i++){
+                document.getElementById(i).style.width='200px';
+                document.getElementById(i).style.height='18px';
+            }
+        }
+        else if(sizeType=='Medium'){
+            //Change container
+            document.querySelector('.container').style.height='300px';
+            document.querySelector('.container').style.width='200px';
+
+            //Managing Margin of image
+            document.querySelector('.img').style.margin='100px 0px 0px -30px';
+
+            //Maintain Liquid
+            for(var i=1;i<=10;i++){
+                document.getElementById(i).style.width='200px';
+                document.getElementById(i).style.height='30px';
+            }
+        }
+        else if(sizeType=='large'){
+            
+            //Change container
+            document.querySelector('.container').style.height='400px';
+            document.querySelector('.container').style.width='250px';
+
+            //Managing Margin of image
+            document.querySelector('.img').style.margin='150px 0px 0px -30px';
+
+            //Maintain Liquid
+            for(var i=1;i<=10;i++){
+                document.getElementById(i).style.width='250px';
+                document.getElementById(i).style.height='40px';
+            }
+        }
+        else if(sizeType=='xlarge'){
+            //Change container
+            document.querySelector('.container').style.height='400px';
+            document.querySelector('.container').style.width='300px';
+
+            //Managing Margin of image
+            document.querySelector('.img').style.margin='150px 0px 0px -30px';
+
+            //Maintain Liquid
+            for(var i=1;i<=10;i++){
+                document.getElementById(i).style.width='300px';
+                document.getElementById(i).style.height='40px';
+            }
+        }
+    }
+</script>
+</html>
